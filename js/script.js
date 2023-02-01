@@ -5,12 +5,12 @@ createApp({
         return {
             myAPI: 'server.php',
             newTask: '',
-            list: []
+            list: ''
         }
     },
     methods: {
         addTask() {
-            let obj = {
+            const obj = {
                 item: this.newTask,
                 done: false
             }
@@ -20,6 +20,8 @@ createApp({
             }).then((response) => {
                 this.list = response.data.data;
             })
+
+            this.newTask = ''
         }
     },
     mounted() {
