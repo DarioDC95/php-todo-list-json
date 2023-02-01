@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #001632;
+}
+
+.mycontainer {
+    width: 500px;
+    margin: 0 auto;
+}
+
+header {
+    margin-top: 50px;
+    font-size: 120px;
+}
+
+main {
+    margin-bottom: 20px;
+}
