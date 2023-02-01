@@ -12,9 +12,12 @@ createApp({
         addTask() {
             let obj = {
                 item: this.newTask,
+                done: false
             }
 
-            axios.post(this.myAPI, {obj}).then((response) => {
+            axios.post(this.myAPI, obj, 
+                {headers: {'Content-Type': 'multipart/form-data'}
+            }).then((response) => {
                 this.list = response.data.data;
             })
         }
