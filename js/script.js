@@ -34,6 +34,17 @@ createApp({
             }).then((response) => {
                 this.list = response.data.data;
             })
+        },
+        removeTask(value) {
+            const obj = {
+                removeIndex: value
+            }
+
+            axios.post(this.myAPI, obj, 
+                {headers: {'Content-Type': 'multipart/form-data'}
+            }).then((response) => {
+                this.list = response.data.data;
+            })
         }
     },
     mounted() {

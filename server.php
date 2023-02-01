@@ -22,6 +22,11 @@
         $list_Todo['data'][$index]['done'] = !$list_Todo['data'][$index]['done'];
     }
 
+    if(isset($_POST['removeIndex'])) {
+        $index = $_POST['removeIndex'];
+        array_splice($list_Todo['data'], $index, 1);
+    }
+
     // RICAMBIO IN JSON, LI CONTROLLO E STAMPO
     $list_Todo = json_encode($list_Todo, JSON_PRETTY_PRINT);
     file_put_contents('./todo_list.json', $list_Todo);
