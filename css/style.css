@@ -25,3 +25,7 @@ main {
 footer {
     margin-bottom: 50px;
 }
+
+span {
+    cursor: pointer;
+}

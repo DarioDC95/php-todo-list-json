@@ -10,9 +10,23 @@ createApp({
     },
     methods: {
         addTask() {
+            if(this.newTask != '') {
+                const obj = {
+                    item: this.newTask
+                }
+    
+                axios.post(this.myAPI, obj, 
+                    {headers: {'Content-Type': 'multipart/form-data'}
+                }).then((response) => {
+                    this.list = response.data.data;
+                })
+    
+                this.newTask = ''
+            }
+        },
+        DoneTask(value) {
             const obj = {
-                item: this.newTask,
-                done: false
+                index: value
             }
 
             axios.post(this.myAPI, obj, 
@@ -20,11 +34,6 @@ createApp({
             }).then((response) => {
                 this.list = response.data.data;
             })
-
-            this.newTask = ''
-        },
-        removeTask(value) {
-            
         }
     },
     mounted() {

@@ -18,15 +18,11 @@
         },
         {
             "item": "Sono distrutto",
-            "done": "false"
+            "done": false
         },
         {
             "item": "Exercise Done",
-            "done": "false"
-        },
-        {
-            "item": "FRGTG",
-            "done": "false"
+            "done": false
         }
     ]
 }
