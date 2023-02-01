@@ -51,12 +51,10 @@
                     <div class="row">
                         <div class="col">
                             <div class="mycard text-center text-secondary">
-                                <form action="./server.php">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                        <button @click="addTask()" type="submit" class="btn btn-outline-warning" type="button" id="button-addon2">Button</button>
-                                    </div>
-                                </form>
+                                <div class="input-group mb-3">
+                                    <input v-model="newTask" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    <button @click="addTask()" class="btn btn-outline-warning" type="button" id="button-addon2">Inserisci</button>
+                                </div>
                             </div>
                         </div>
                     </div>
