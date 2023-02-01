@@ -1,1 +1,32 @@
-{"data":[{"item":"HTML","done":false},{"item":"CSS","done":false},{"item":"Responsive design","done":false},{"item":"Javascript","done":false},{"item":"Sono distrutto","done":"false"},{"item":"Exercise Done","done":"false"}]}
+{
+    "data": [
+        {
+            "item": "HTML",
+            "done": false
+        },
+        {
+            "item": "CSS",
+            "done": false
+        },
+        {
+            "item": "Responsive design",
+            "done": false
+        },
+        {
+            "item": "Javascript",
+            "done": false
+        },
+        {
+            "item": "Sono distrutto",
+            "done": "false"
+        },
+        {
+            "item": "Exercise Done",
+            "done": "false"
+        },
+        {
+            "item": "FRGTG",
+            "done": "false"
+        }
+    ]
+}

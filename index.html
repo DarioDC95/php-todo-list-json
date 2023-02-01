@@ -36,7 +36,7 @@
                                 <ul class="list-group">
                                     <li v-for="(value, index) in list" ::key="index" class="list-group-item d-flex justify-content-between align-items-center">
                                       {{ value.item }}
-                                      <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                      <button @click="removeTask(index)" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
                                     </li>
                                 </ul>
                             </div>

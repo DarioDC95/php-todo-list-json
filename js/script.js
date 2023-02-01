@@ -22,6 +22,9 @@ createApp({
             })
 
             this.newTask = ''
+        },
+        removeTask(value) {
+            
         }
     },
     mounted() {

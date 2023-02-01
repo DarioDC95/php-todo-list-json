@@ -15,7 +15,7 @@
 
 
         array_push($list_Todo['data'], $obj);
-        $list_Todo = json_encode($list_Todo);
+        $list_Todo = json_encode($list_Todo, JSON_PRETTY_PRINT);
         file_put_contents('./todo_list.json', $list_Todo);
         $list_Todo = file_get_contents('./todo_list.json');
         $list_Todo = json_decode($list_Todo, true);
