@@ -10,9 +10,9 @@ createApp({
     },
     methods: {
         addTask() {
-            if(this.newTask != '') {
+            if(this.newTask.trim() != '' && this.newTask != '') {
                 const obj = {
-                    item: this.newTask
+                    item: this.newTask.trim()
                 }
     
                 axios.post(this.myAPI, obj, 
