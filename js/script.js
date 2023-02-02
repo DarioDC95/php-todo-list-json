@@ -68,6 +68,7 @@ createApp({
                 })
                 this.editItem = '';
             }
+            this.errorEdit = '';
         },
         editTask(value, string) {
             if(this.editItem.trim() != '' && this.editItem != '') {
@@ -80,6 +81,8 @@ createApp({
                     {headers: {'Content-Type': 'multipart/form-data'}
                 }).then((response) => {
                     this.list = response.data.data;
+                    this.editItem = '';
+                    this.errorEdit = '';
                 })
             }
             else {
