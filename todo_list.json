@@ -23,6 +23,10 @@
         {
             "item": "Exercise Done",
             "done": false
+        },
+        {
+            "item": "editTask Done",
+            "done": false
         }
     ]
 }

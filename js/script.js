@@ -77,7 +77,7 @@ createApp({
                     editItem: string.trim()
                 }
     
-                axios.post(this.myAPI, obj, 
+                axios.post(this.myAPI, {edit: JSON.stringify(obj)}, 
                     {headers: {'Content-Type': 'multipart/form-data'}
                 }).then((response) => {
                     this.list = response.data.data;
