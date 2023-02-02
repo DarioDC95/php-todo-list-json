@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #001632;
+}
+
+.mycontainer {
+    width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    padding-top: 50px;
+    font-size: 90px;
+    margin-bottom: 50px;
+}
