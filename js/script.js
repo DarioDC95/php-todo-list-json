@@ -5,7 +5,8 @@ createApp({
         return {
             myAPI: 'server.php',
             newTask: '',
-            list: ''
+            list: '',
+            errorMessage: ''
         }
     },
     methods: {
@@ -21,7 +22,12 @@ createApp({
                     this.list = response.data.data;
                 })
     
-                this.newTask = ''
+                this.newTask = '';
+                this.errorMessage = ''
+            }
+            else {
+                this.newTask = '';
+                this.errorMessage = 'Non puoi inserire una stringa vuota'
             }
         },
         DoneTask(value) {
