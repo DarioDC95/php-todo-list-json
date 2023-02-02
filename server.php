@@ -1,5 +1,5 @@
 <?php 
-    include './functions.php';
+    include __DIR__. './functions.php';
 
     // RECUPERO I DATI DAL FILE JSON
     $list_Todo = file_get_contents('./todo_list.json');

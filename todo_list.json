@@ -17,15 +17,11 @@
             "done": false
         },
         {
-            "item": "Sono distrutto",
+            "item": "Given Auto-scroll",
             "done": false
         },
         {
-            "item": "Exercise Done",
-            "done": false
-        },
-        {
-            "item": "editTask Done",
+            "item": "Created function.php",
             "done": false
         }
     ]

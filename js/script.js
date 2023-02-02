@@ -22,6 +22,9 @@ createApp({
                     {headers: {'Content-Type': 'multipart/form-data'}
                 }).then((response) => {
                     this.list = response.data.data;
+                    this.$nextTick(() => {
+                        this.scrollToEnd()
+                    })
                 })
     
                 this.newTask = '';
@@ -89,11 +92,17 @@ createApp({
                 this.editItem = '';
                 this.errorEdit = 'Non puoi inserire una stringa vuota'
             }
-        }
+        },
+        scrollToEnd() {  
+            window.scrollTo(0, document.body.scrollHeight)
+        },
     },
     mounted() {
         axios.post(this.myAPI).then((response) => {
             this.list = response.data.data;
+            this.$nextTick(() => {
+                this.scrollToEnd()
+            })
         })
     },
 }).mount('#app')
