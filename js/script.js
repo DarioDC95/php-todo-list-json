@@ -7,7 +7,8 @@ createApp({
             newTask: '',
             list: '',
             errorMessage: '',
-            editItem: ''
+            editItem: '',
+            errorEdit: ''
         }
     },
     methods: {
@@ -66,16 +67,22 @@ createApp({
             }
         },
         editTask(value, string) {
-            const obj = {
-                editIndex: value,
-                editItem: string
+            if(this.editItem.trim() != '' && this.editItem != '') {
+                const obj = {
+                    editIndex: value,
+                    editItem: string.trim()
+                }
+    
+                axios.post(this.myAPI, obj, 
+                    {headers: {'Content-Type': 'multipart/form-data'}
+                }).then((response) => {
+                    this.list = response.data.data;
+                })
             }
-
-            axios.post(this.myAPI, obj, 
-                {headers: {'Content-Type': 'multipart/form-data'}
-            }).then((response) => {
-                this.list = response.data.data;
-            })
+            else {
+                this.editItem = '';
+                this.errorEdit = 'Non puoi inserire una stringa vuota'
+            }
         }
     },
     mounted() {
