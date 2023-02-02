@@ -57,7 +57,10 @@ createApp({
         openEdit(value) {
             let string = this.list[value].item;
             if(this.list[value].item == string && this.list[value].item != false) {
-                this.list[value].item = false;
+                axios.post(this.myAPI).then((response) => {
+                    this.list = response.data.data;
+                    this.list[value].item = false;
+                })
             }
             else {
                 axios.post(this.myAPI).then((response) => {
