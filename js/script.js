@@ -6,7 +6,8 @@ createApp({
             myAPI: 'server.php',
             newTask: '',
             list: '',
-            errorMessage: ''
+            errorMessage: '',
+            editItem: ''
         }
     },
     methods: {
@@ -44,6 +45,30 @@ createApp({
         removeTask(value) {
             const obj = {
                 removeIndex: value
+            }
+
+            axios.post(this.myAPI, obj, 
+                {headers: {'Content-Type': 'multipart/form-data'}
+            }).then((response) => {
+                this.list = response.data.data;
+            })
+        },
+        openEdit(value) {
+            let string = this.list[value].item;
+            if(this.list[value].item == string && this.list[value].item != false) {
+                this.list[value].item = false;
+            }
+            else {
+                axios.post(this.myAPI).then((response) => {
+                    this.list = response.data.data;
+                })
+                this.editItem = '';
+            }
+        },
+        editTask(value, string) {
+            const obj = {
+                editIndex: value,
+                editItem: string
             }
 
             axios.post(this.myAPI, obj, 
